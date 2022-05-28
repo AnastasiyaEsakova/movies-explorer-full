@@ -1,0 +1,230 @@
+.search-form {
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 70px 70px 10px;
+}
+
+.search-form__container {
+  padding-bottom: 50px;
+  border-bottom: 1px solid  #424242;
+}
+.search-form__container_active {
+  padding-bottom: 69px;
+}
+
+.search-form__box {
+  background-color: #2F2F2F;
+  border-radius: 9px;
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.search-form__img-search {
+  background-image: url(../../images/search.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+  margin-left: 18px;
+}
+
+.search-form__input {
+  margin: 0;
+  padding: 0;
+  background-color: #2F2F2F;
+  border: none;
+  margin-left: 10px;
+  width: 66%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+  color: #fff;
+}
+
+.search-form__input:focus {
+  outline-style: none;
+}
+
+
+.search-form__input::placeholder{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+  color: #8B8B8B;
+}
+
+.search-form__button{
+  margin: 0;
+  padding: 0;
+  min-width: 80px;
+  min-height: 34px;
+  border: none;
+  background-color: #4285F4;
+  border-radius: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 20px;
+  opacity: 1;
+  transition: opacity .3s linear;
+}
+
+.search-form__button:hover {
+  opacity: 0.8;
+}
+
+.search-form__button-search {
+  background-image: url(../../images/search_white.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+}
+
+.search-form__line {
+  height: 40px;
+  width: 1px;
+  background: #424242;
+  margin: 0 30px;
+}
+
+.search-form__checkbox-container {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  position: relative;
+  padding: 0 30px 0 50px ;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search-form__checkbox {
+  display: none;
+  width: 36px;
+  height: 20px;
+  border-radius: 20px;
+}
+
+.search-form__span {
+  width: 36px;
+  height: 20px;
+  background: #EBEBEB;
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: .2s linear;
+}
+.search-form__span::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #F5F5F5;
+  border-radius: 50%;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  transition: .2s linear;
+}
+.search-form__checkbox:checked + .search-form__span {
+  background: #2BE080;
+}
+
+.search-form__checkbox:checked + .search-form__span::after {
+  background: #FFFFFF;
+  left: 22px;
+}
+.search-form__checkbox-container_type_mobile {
+  display: none;
+}
+
+.search-form__error {
+  width: 100%;
+  display: block;
+  margin-top: 7px;
+  display: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #EE3465;
+}
+.search-form__error_active {
+  display: block;
+}
+
+@media screen and (max-width: 768px){
+  .search-form {
+    padding: 80px 30px 10px;
+  }
+  .search-form__input {
+    font-weight: 400;
+    width: 48%;
+  }
+  .search-form__input::placeholder {
+    font-weight: 400;
+  }
+  .search-form__span {
+    font-weight: 400;
+  }
+  .search-form__line {
+    margin: 0 19px;
+  }
+  .search-form__container {
+    padding-bottom: 109px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .search-form {
+    padding: 80px 10px 10px;
+  }
+  .search-form__checkbox-container {
+    display: none;
+  }
+  .search-form__checkbox-container_type_mobile {
+    display: block;
+    margin-top: 45px;
+  }
+  .search-form__line {
+    display: none;
+  }
+  .search-form__img-search {
+    display: none;
+  }
+  .search-form__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 45px;
+  }
+  .search-form__box {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .search-form__button {
+    margin-right: 19px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .search-form__span {
+    font-size: 11px;
+    line-height: 18px;
+  }
+  .search-form__input::placeholder {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .search-form__input {
+    font-size: 14px;
+    line-height: 20px;
+    margin-left: 19px;
+  }
+}
